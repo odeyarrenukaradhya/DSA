@@ -1,0 +1,56 @@
+class Solution {
+    public int[] maxNumber(int[] nums1, int[] nums2, int k) {
+        int m = nums1.length, n = nums2.length;
+        int[] ans = new int[k];
+        for (int i = 0; i <= k; i++) {
+            int j = k - i;
+            if (i > m || j > n) continue;
+            int[] a = maxArray(nums1, i);
+            int[] b = maxArray(nums2, j);
+            int[] candidate = merge(a, b);
+            if (greater(candidate, 0, ans, 0)) {
+                ans = candidate;
+            }
+        }
+        return ans;
+    }
+    private int[] maxArray(int[] nums, int k) {
+        int len = nums.length;
+        int[] stack = new int[k];
+        int top = -1;
+        int toRemove = len - k;
+        for (int num : nums) {
+            while (top >= 0 && stack[top] < num && toRemove > 0) {
+                top--;
+                toRemove--;
+            }
+            if (top + 1 < k) {
+                stack[++top] = num;
+            } else {
+                toRemove--;
+            }
+        }
+        return stack;
+    }
+    private int[] merge(int[] a, int[] b) {
+        int la = a.length, lb = b.length;
+        int[] merged = new int[la + lb];
+        int ia = 0, ib = 0, im = 0;
+        while (ia < la || ib < lb) {
+            if (greater(a, ia, b, ib)) {
+                merged[im++] = a[ia++];
+            } else {
+                merged[im++] = b[ib++];
+            }
+        }
+        return merged;
+    }
+    private boolean greater(int[] a, int i, int[] b, int j) {
+        int la = a.length, lb = b.length;
+        while (i < la && j < lb && a[i] == b[j]) {
+            i++;
+            j++;
+        }
+        return j == lb || (i < la && a[i] > b[j]);
+    }
+}
