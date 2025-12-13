@@ -1,0 +1,36 @@
+class Solution {
+    public List<String> validateCoupons(String[] code, String[] businessLine, boolean[] isActive) {
+        List<int[]> list = new ArrayList<>();
+        Map<String,Integer> order = new HashMap<>();
+        order.put("electronics", 0);
+        order.put("grocery", 1);
+        order.put("pharmacy", 2);
+        order.put("restaurant", 3);
+        for (int i = 0; i < code.length; i++) {
+            if (!isActive[i]) continue;
+            String s = code[i];
+            if (s.length() == 0) continue;
+            String b = businessLine[i];
+            if (!order.containsKey(b)) continue;
+            boolean ok = true;
+            for (char c : s.toCharArray()) {
+                if (!Character.isLetterOrDigit(c) && c != '_') {
+                    ok = false;
+                    break;
+                }
+            }
+            if (!ok) continue;
+            list.add(new int[]{ i });
+        }
+        Collections.sort(list, (a, b) -> {
+            int i = a[0], j = b[0];
+            int ca = order.get(businessLine[i]);
+            int cb = order.get(businessLine[j]);
+            if (ca != cb) return ca - cb;
+            return code[i].compareTo(code[j]);
+        });
+        List<String> res = new ArrayList<>();
+        for (int[] x : list) res.add(code[x[0]]);
+        return res;
+    }
+}
