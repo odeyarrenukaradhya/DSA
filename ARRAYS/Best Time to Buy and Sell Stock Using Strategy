@@ -8,6 +8,7 @@ class Solution {
             profitSum[i + 1] = profitSum[i] + (long) prices[i] * strategy[i];
             priceSum[i + 1] = priceSum[i] + prices[i];
         }
+
         long res = profitSum[n];
         for (int i = k - 1; i < n; i++) {
             long leftProfit = profitSum[i - k + 1];
