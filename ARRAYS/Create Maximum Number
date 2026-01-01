@@ -14,6 +14,7 @@ class Solution {
         }
         return ans;
     }
+
     private int[] maxArray(int[] nums, int k) {
         int len = nums.length;
         int[] stack = new int[k];
@@ -32,6 +33,7 @@ class Solution {
         }
         return stack;
     }
+
     private int[] merge(int[] a, int[] b) {
         int la = a.length, lb = b.length;
         int[] merged = new int[la + lb];
