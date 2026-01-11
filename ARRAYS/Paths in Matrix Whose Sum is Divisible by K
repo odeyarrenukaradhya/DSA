@@ -13,6 +13,7 @@ class Solution {
                         int prev = ((r - val) % k + k) % k;
                         dp[i][j][r] = (dp[i][j][r] + dp[i - 1][j][prev]) % mod;
                     }
+
                     if (j > 0) {
                         int prev = ((r - val) % k + k) % k;
                         dp[i][j][r] = (dp[i][j][r] + dp[i][j - 1][prev]) % mod;
