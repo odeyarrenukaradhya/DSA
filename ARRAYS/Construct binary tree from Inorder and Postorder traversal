@@ -6,7 +6,6 @@ class TreeNode {
     TreeNode right;
     TreeNode(int x) { val = x; }
 }
-
 public class Solution {
     private Map<Integer, Integer> inorderMap;
     private int postIndex;
@@ -19,7 +18,6 @@ public class Solution {
         postIndex = postorder.length - 1;
         return build(inorder, postorder, 0, inorder.length - 1);
     }
-
     private TreeNode build(int[] inorder, int[] postorder, int left, int right) {
         if (left > right) return null;
         int rootVal = postorder[postIndex--];
