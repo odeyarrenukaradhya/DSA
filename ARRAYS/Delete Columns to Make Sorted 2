@@ -4,6 +4,7 @@ class Solution {
         int m = strs[0].length();
         int ans = 0;
         boolean[] sorted = new boolean[n - 1];
+
         for (int c = 0; c < m; c++) {
             boolean bad = false;
             for (int i = 0; i < n - 1; i++) {
