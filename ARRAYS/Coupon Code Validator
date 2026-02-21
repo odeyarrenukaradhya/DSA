@@ -6,7 +6,6 @@ class Solution {
         order.put("grocery", 1);
         order.put("pharmacy", 2);
         order.put("restaurant", 3);
-
         for (int i = 0; i < code.length; i++) {
             if (!isActive[i]) continue;
             String s = code[i];
