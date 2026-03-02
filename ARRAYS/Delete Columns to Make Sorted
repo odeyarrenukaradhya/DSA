@@ -3,6 +3,7 @@ class Solution {
         int n = strs.length;
         int m = strs[0].length();
         int count = 0;
+
         for (int c = 0; c < m; c++) {
             for (int i = 1; i < n; i++) {
                 if (strs[i].charAt(c) < strs[i - 1].charAt(c)) {
