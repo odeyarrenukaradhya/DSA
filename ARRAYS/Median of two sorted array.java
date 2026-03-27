@@ -6,12 +6,10 @@ class Solution {
         while (low <= high) {
             int partitionX = (low + high) / 2;
             int partitionY = (x + y + 1) / 2 - partitionX;
-
             int maxX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];
             int maxY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];
             int minX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX];
             int minY = (partitionY == y) ? Integer.MAX_VALUE : nums2[partitionY];
-
             if (maxX <= minY && maxY <= minX) {
                 if ((x + y) % 2 == 0)
                     return ((double)Math.max(maxX, maxY) + Math.min(minX, minY)) / 2;
