@@ -5,7 +5,6 @@ class Solution {
     }
     private void addOne(StringBuilder s) {
         int i = s.length() - 1;
-
         // Iterating while the character is 1 and changing to 0
         while (i >= 0 && s.charAt(i) != '0') {
             s.setCharAt(i, '0');
