@@ -7,7 +7,6 @@ class Solution {
         Map<String, String> vowelMap = new HashMap<>();
         for (String word : wordlist) {
             exactWords.add(word);
-            
             String lower = word.toLowerCase();
             caseMap.putIfAbsent(lower, word);
             
