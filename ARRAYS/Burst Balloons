@@ -4,6 +4,7 @@ class Solution {
         int[] balloons = new int[n + 2];
         balloons[0] = 1;
         balloons[n + 1] = 1;
+
         for (int i = 0; i < n; i++) {
             balloons[i + 1] = nums[i];
         }
