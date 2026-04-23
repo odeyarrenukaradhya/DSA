@@ -3,6 +3,7 @@ class Solution {
         if (nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
         int x = nums1.length, y = nums2.length;
         int low = 0, high = x;
+        
         while (low <= high) {
             int partitionX = (low + high) / 2;
             int partitionY = (x + y + 1) / 2 - partitionX;
