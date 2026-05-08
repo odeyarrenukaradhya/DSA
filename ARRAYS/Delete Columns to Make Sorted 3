@@ -4,7 +4,6 @@ class Solution {
         int m = strs[0].length();
         int[] dp = new int[m];
         int ans = 0;
-
         for (int i = 0; i < m; i++) {
             dp[i] = 1;
             for (int j = 0; j < i; j++) {
