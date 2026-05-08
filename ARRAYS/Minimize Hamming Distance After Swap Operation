@@ -2,14 +2,12 @@ class Solution {
 
     private int[] fa;
     private int[] rank;
-
     private int find(int x) {
         if (fa[x] != x) {
             fa[x] = find(fa[x]);
         }
         return fa[x];
     }
-
     private void union(int x, int y) {
         x = find(x);
         y = find(y);
