@@ -1,4 +1,5 @@
 class Solution {
+
     private int[] fa;
     private int[] rank;
     private int find(int x) {
