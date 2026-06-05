@@ -4,7 +4,6 @@ class Solution {
                         for (int x: A) {
                                     count.put(x, count.getOrDefault(x, 0) + 1);
                                             }
-
                                                     for (int k: count.keySet())
                                                                 if (count.get(k) > 1)
                                                                                 return k;
