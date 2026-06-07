@@ -12,6 +12,7 @@ class Solution {
                     break;
                 }
             }
+
             if (bad) {
                 ans++;
             } else {
