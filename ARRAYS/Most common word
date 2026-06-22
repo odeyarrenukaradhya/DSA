@@ -1,5 +1,6 @@
 import java.util.*;
 class Solution {
+
     public String mostCommonWord(String paragraph, String[] banned) {
         Set<String> bannedSet = new HashSet<>();
         for (String word : banned) {
