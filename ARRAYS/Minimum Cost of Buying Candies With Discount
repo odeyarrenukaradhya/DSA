@@ -1,5 +1,4 @@
 class Solution {
-
     public int minimumCost(int[] cost) {
         Arrays.sort(cost);
         int res = 0;
