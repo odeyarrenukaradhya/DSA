@@ -4,7 +4,6 @@ class TreeNode {
     TreeNode right;
     TreeNode(int x) { val = x; }
 }
-
 public class Solution {
     private Map<Integer, Integer> inorderMap;
     private int preorderIndex;
