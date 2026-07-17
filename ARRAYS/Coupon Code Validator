@@ -1,5 +1,6 @@
 class Solution {
     public List<String> validateCoupons(String[] code, String[] businessLine, boolean[] isActive) {
+
         List<int[]> list = new ArrayList<>();
         Map<String,Integer> order = new HashMap<>();
         order.put("electronics", 0);
