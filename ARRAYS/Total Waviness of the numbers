@@ -6,7 +6,6 @@ class Solution {
         }
         return total;
     }
-
     private int getWaviness(int x) {
         String s = Integer.toString(x);
         int waviness = 0;
