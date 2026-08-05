@@ -1,6 +1,5 @@
 class Solution {
     public int maxTwoEvents(int[][] events) {
-
         int n = events.length;
         Arrays.sort(events, (a, b) -> a[0] - b[0]);
         int[] suffixMax = new int[n + 1];
