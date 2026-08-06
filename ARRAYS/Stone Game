@@ -1,5 +1,6 @@
 class Solution {
     public boolean stoneGame(int[] piles) {
+
         int N = piles.length;
         // dp[i+1][j+1] = the value of the game [piles[i], ..., piles[j]].
         int[][] dp = new int[N+2][N+2];
