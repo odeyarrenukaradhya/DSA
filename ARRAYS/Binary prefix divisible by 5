@@ -1,4 +1,5 @@
 class Solution {
+
     public List<Boolean> prefixesDivBy5(int[] nums) {
         List<Boolean> ans = new ArrayList<>();
         int val = 0;
