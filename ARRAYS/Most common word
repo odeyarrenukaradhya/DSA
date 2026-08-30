@@ -5,6 +5,7 @@ class Solution {
         for (String word : banned) {
             bannedSet.add(word.toLowerCase());
         }
+
         String[] words = paragraph.toLowerCase().split("[^a-z]+");
         Map<String, Integer> countMap = new HashMap<>();
         for (String word : words) {
