@@ -1,5 +1,4 @@
 class Solution {
-
     public long maxProfit(int[] prices, int[] strategy, int k) {
         int n = prices.length;
         long[] profitSum = new long[n + 1];
