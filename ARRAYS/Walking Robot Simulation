@@ -1,4 +1,5 @@
 class Solution {
+
     private static final long HASH_MULTIPLIER = 60013; 
     public int robotSim(int[] commands, int[][] obstacles) {
         Set<Long> obstacleSet = new HashSet<>();
