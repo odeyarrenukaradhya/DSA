@@ -1,5 +1,4 @@
 class Solution {
-
     private void divideByTwo(StringBuilder s) {
         s.deleteCharAt(s.length() - 1);
     }
